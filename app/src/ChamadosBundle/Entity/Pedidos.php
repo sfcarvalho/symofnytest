@@ -28,7 +28,7 @@ class Pedidos
    * @ORM\Column(name="nome", type="string", length=250, nullable=true)
    */
   private $nome;
-  
+
   /**
    * @return int
    */
@@ -60,7 +60,6 @@ class Pedidos
   {
     $this->nome = $nome;
   }
-
 
 
 }
