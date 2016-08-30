@@ -1,0 +1,4 @@
+services:
+#    chamados.example:
+#        class: ChamadosBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
