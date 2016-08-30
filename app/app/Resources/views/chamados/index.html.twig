@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Chamados list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Obs</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for chamado in chamados %}
+            <tr>
+                <td><a href="{{ path('chamados_show', { 'id': chamado.id }) }}">{{ chamado.id }}</a></td>
+                <td>{{ chamado.titulo }}</td>
+                <td>{{ chamado.obs }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('chamados_show', { 'id': chamado.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('chamados_edit', { 'id': chamado.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('chamados_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
