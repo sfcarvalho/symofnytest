@@ -20,6 +20,8 @@ class SacType extends AbstractType
       ->add('email')
       ->add('titulo')
       ->add('obs')
+      ->add('isActive')
+      // ->add('form_enctype', 'text/data')
     ;
   }
 

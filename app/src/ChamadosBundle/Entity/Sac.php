@@ -13,7 +13,6 @@ use Doctrine\ORM\Mapping as ORM;
 class Sac
 {
 
-
   /**
    * @var integer
    *
@@ -23,7 +22,6 @@ class Sac
    * @ORM\SequenceGenerator(sequenceName="chamados_id_seq", allocationSize=1, initialValue=1)
    */
   private $id;
-
   /**
    * @var string
    *
@@ -58,6 +56,29 @@ class Sac
    * @ORM\Column(name="numero_pedido", type="integer", nullable=false)
    */
   private $numero_pedido;
+
+  /**
+   * @var string
+   *
+   */
+  private $isActive;
+
+  /**
+   * @return string
+   */
+  public function getIsActive()
+  {
+    return $this->isActive;
+  }
+
+  /**
+   * @param string $isActive
+   */
+  public function setIsActive($isActive)
+  {
+    $this->isActive = $isActive;
+  }
+
   /**
    * @return int
    */

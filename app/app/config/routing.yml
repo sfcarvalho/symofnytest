@@ -6,3 +6,8 @@ chamados:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+#sac:
+#    resource: "@ChamadosBundle/Controller/"
+#    type:     annotation
+#    prefix:   /

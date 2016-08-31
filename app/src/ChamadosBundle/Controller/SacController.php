@@ -8,34 +8,34 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use ChamadosBundle\Entity\Sac;
 use ChamadosBundle\Form\SacType;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
+///**
+// * Sac controller.
+// *
+// * @Route("/")
+// */
 
-
-/**
- * Default controller.
- *
- * @Route("/")
- */
-
-class DefaultController extends Controller
+class SacController extends Controller
 {
-    /**
-     * @Route("/", name="sac_new")
-     * @Method("GET")
-     */
-    public function newAction(Request $request)
-    {
-      $entity = new Sac();
-      $form = $this->createCreateForm($entity);
+  /**
+   * @Route("/", name="sac_new")
+   * @Method("GET")
+   */
+  public function newAction(Request $request)
+  {
+    $entity = new Sac();
 
-      return $this->render('ChamadosBundle:Default:busca.html.twig',
-        array(
-          'entity' => $entity,
-          'form' => $form->createView()
-        )
-      );
+    $form = $this->createCreateForm($entity);
 
-    }
+    return $this->render('ChamadosBundle:Chamados:new.html.twig',
+      array(
+        'entity' => $entity,
+        'form' => $form->createView()
+      )
+    );
+
+  }
 
   /**
    * Creates a new Demo entity.
@@ -51,14 +51,14 @@ class DefaultController extends Controller
       return new JsonResponse(array('message' => 'You can access this only using Ajax!'), 400);
     }
 
-    $entity = new Demo();
+    $entity = new Sac();
     $form = $this->createCreateForm($entity);
     $form->handleRequest($request);
 
     if ($form->isValid()) {
-      $em = $this->getDoctrine()->getManager();
-      $em->persist($entity);
-      $em->flush();
+//      $em = $this->getDoctrine()->getManager();
+//      $em->persist($entity);
+//      $em->flush();
 
       return new JsonResponse(array('message' => 'Success!'), 200);
     }
@@ -66,7 +66,7 @@ class DefaultController extends Controller
     $response = new JsonResponse(
       array(
         'message' => 'Error',
-        'form' => $this->renderView('ChamadosBundle:Demo:form.html.twig',
+        'form' => $this->renderView('ChamadosBundle:Chamados:busca.html.twig',
           array(
             'entity' => $entity,
             'form' => $form->createView(),
@@ -83,14 +83,14 @@ class DefaultController extends Controller
 //      return $this->redirectToRoute('busca', array('id' => $request->request->get('sac')['numero_pedido']));
 //    }
 //
-//    return $this->render('ChamadosBundle:Default:busca.html.twig', array(
+//    return $this->render('ChamadosBundle:Sac:busca.html.twig', array(
 //      'chamado' => $chamado,
 //      'form' => $form->createView(),
 //    ));
   }
 
   /**
-   * Creates a form to create a Demo entity.
+   * Creates a form to create a Sac entity.
    *
    * @param Sac $entity The entity
    *
@@ -98,7 +98,8 @@ class DefaultController extends Controller
    */
   private function createCreateForm(Sac $entity)
   {
-    $form = $this->createForm(new SacType(), $entity,
+    // die(var_dump($entity));
+    $form = $this->createForm(SacType::class, $entity,
       array(
         'action' => $this->generateUrl('sac_create'),
         'method' => 'POST',

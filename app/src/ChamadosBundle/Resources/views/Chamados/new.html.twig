@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="form_error"></div>
+    <form method="POST" class="ajaxForm" action="{{path('sac_create')}}">
+        <div id="form_body">
+            {% include 'ChamadosBundle:Chamados:busca.html.twig' with {'form': form} %}
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+        {{form_rest(form)}}
+    </form>
+
+{% endblock %}
