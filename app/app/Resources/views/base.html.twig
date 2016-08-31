@@ -14,9 +14,12 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}
-            {% javascripts 'bundles/chamados/js/*' %}
-            <script src="{{ asset_url }}"></script>
-            {% endjavascripts %}
+            <script src="{{ asset('bundles/chamados/js/jquery-3.1.0.min.js') }}"></script>
+            <script src="{{ asset('bundles/chamados/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('bundles/chamados/js/main.js') }}"></script>
+            <script>
+                initAjaxForm();
+            </script>
         {% endblock %}
     </body>
 </html>

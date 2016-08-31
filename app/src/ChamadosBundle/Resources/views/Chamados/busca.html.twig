@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{#{% block body %}#}
+    {#<h1>Busca</h1>#}
+    {#{{ form_start(form) }}#}
+    {#{{ form_widget(form) }}#}
+    {#<input type="submit" value="Buscar" />#}
+    {#{{ form_end(form) }}#}
+{#{% endblock %}#}
+
+{% block body -%}
+    <h1>Novo Chamado</h1>
+
+    <div class="form_error"></div>
+    <form method="POST" class="ajaxForm" action="{{path('demo_create')}}" {{ form_enctype(form) }}>
+        <div id="form_body">
+            {% include 'AcmeDemoBundle:Demo:form.html.twig' with {'form': form} %}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {{form_rest(form)}}
+    </form>
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('demo') }}">
+                Back to the list
+            </a>
+        </li>
+    </ul>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script>
+        initAjaxForm();
+    </script>
+{% endblock %}
