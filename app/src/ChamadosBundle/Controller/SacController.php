@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use ChamadosBundle\Entity\Sac;
+use ChamadosBundle\Entity\Clientes;
 use ChamadosBundle\Form\SacType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
@@ -55,11 +56,29 @@ class SacController extends Controller
 
       $repo = $this->getDoctrine()->getRepository('ChamadosBundle:Pedidos');
       $pedidoId = $request->request->get('sac')['numero_pedido'];
-      $pedido = $repo->findById($pedidoId); // var_dump($pedido[0]);
+      $pedido = $repo->findById($pedidoId);
 
-      return empty($pedido) ? new JsonResponse('', 200) : new JsonResponse(array('message' => json_encode($pedido[0]->id)), 200);
+      $repoCli = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Clientes');
+      $cliEmail = $request->request->get('sac')['email'];
+      $cli = $repoCli->findOneByEmail($cliEmail);
 
-
+      // Pedido não encontrado
+      if(empty($pedido)){
+        return new JsonResponse('', 200);
+      }else{
+        // Email não cadastrado
+        if(is_null($cli) && !empty($cliEmail)){
+          $cliente = new Clientes();
+          $cliente->setNome('');
+          $cliente->setEmail($cliEmail);
+          $em = $this->getDoctrine()->getManager();
+          $em->persist($cliente);
+          $em->flush();
+          return new JsonResponse(['message' => json_encode(['pedido' => $pedido[0]->id,'email' => 'Email cadastrado com sucesso'])],200);
+        }else{
+          return new JsonResponse(['message' => json_encode(['pedido' => $pedido[0]->id])],200);
+        }
+      }
     }
 
     $response = new JsonResponse(
