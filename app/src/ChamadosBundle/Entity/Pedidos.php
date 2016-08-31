@@ -20,14 +20,14 @@ class Pedidos
    * @ORM\GeneratedValue(strategy="SEQUENCE")
    * @ORM\SequenceGenerator(sequenceName="pedidos_id_seq", allocationSize=1, initialValue=1)
    */
-  private $id;
+  public $id;
 
   /**
    * @var string
    *
    * @ORM\Column(name="nome", type="string", length=250, nullable=true)
    */
-  private $nome;
+  public $nome;
 
   /**
    * @return int

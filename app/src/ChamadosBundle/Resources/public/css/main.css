@@ -1,3 +1,17 @@
 *{
     padding: 3px;
 }
+
+.error-area {
+    padding: 10px;
+    border-radius: 5px ;
+}
+
+.success-area {
+    padding: 10px;
+    border-radius: 5px ;
+}
+
+.hide {
+    display: none;
+}
