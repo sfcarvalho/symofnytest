@@ -12,19 +12,19 @@ use ChamadosBundle\Entity\Clientes;
 use ChamadosBundle\Form\SacType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-///**
-// * Sac controller.
-// *
-// * @Route("/")
-// */
+/**
+ * Sac controller.
+ *
+ * @Route("/")
+ */
 
 class SacController extends Controller
 {
   /**
-   * @Route("/", name="sac_new")
+   * @Route("/", name="sac_index")
    * @Method("GET")
    */
-  public function newAction(Request $request)
+  public function indexAction(Request $request)
   {
     $entity = new Sac();
 
@@ -40,9 +40,9 @@ class SacController extends Controller
   }
 
   /**
-   * Creates a new Demo entity.
+   * Creates a new Sac entity.
    *
-   * @Route("/", name="sac_create")
+   * @Route("/novoChamado", name="sac_create")
    * @Method("POST")
    *
    */
@@ -149,4 +149,22 @@ class SacController extends Controller
     return $form;
   }
 
+  /**
+   * @Route("/reports", name="sac_reports")
+   * @Method("GET")
+   */
+  public function reportsAction(Request $request)
+  {
+    $entity = new Sac();
+
+    $form = $this->createCreateForm($entity);
+
+    return $this->render('ChamadosBundle:Chamados:reports.html.twig',
+      array(
+        'entity' => $entity,
+        'form' => $form->createView()
+      )
+    );
+
+  }
 }

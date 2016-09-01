@@ -3,17 +3,17 @@
 {% block body %}
 
     <div class="page-header">
-        <h2>Inserir Novo Chamado </h2>
+        <h2>Relatórios </h2>
     </div>
 
     <small>Por favor, preencha corretamente todos os campos solicitados.</small>
     <div class="form_error"></div>
     <form method="POST" class="ajaxForm" action="{{path('sac_create')}}">
         <div id="form_body">
-            {% include 'ChamadosBundle:Chamados:busca.html.twig' with {'form': form} %}
+            {% include 'ChamadosBundle:Chamados:reportsFomr.html.twig' with {'form': form} %}
         </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
         {{form_rest(form)}}
     </form>
-</div>
+    </div>
 {% endblock %}

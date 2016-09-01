@@ -20,7 +20,7 @@ use ChamadosBundle\Form\SacType;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="sac_new")
+     * @Route("/", name="default_new")
      * @Method("GET")
      */
     public function newAction(Request $request)
@@ -28,12 +28,13 @@ class DefaultController extends Controller
       $entity = new Sac();
       $form = $this->createCreateForm($entity);
 
-      return $this->render('ChamadosBundle:Default:busca.html.twig',
-        array(
-          'entity' => $entity,
-          'form' => $form->createView()
-        )
-      );
+      return $this->redirectToRoute('/sac/novo');
+//      return $this->render('ChamadosBundle:Default:busca.html.twig',
+//        array(
+//          'entity' => $entity,
+//          'form' => $form->createView()
+//        )
+//      );
 
     }
 

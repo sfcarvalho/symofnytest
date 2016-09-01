@@ -1,0 +1,15 @@
+{% block body %}
+    <div class="row" >
+        <div class="col-lg-4 col-md-4">
+            <div class="col-md-12 bg-danger error-area hide"></div>
+            <div class="col-md-12 bg-success success-area hide"></div>
+            <div class="form-group input-group">
+                {{ form_widget(form.numero_pedido,  {'attr': {'placeholder':'Numero Pedido', 'title':'Numero Pedido', 'class':'form-control'}}) }}
+                {{ form_widget(form.nome_cliente,  {'attr': {'placeholder':'Nome Cliente', 'title':'Nome Cliente', 'class':'form-control'}}) }}
+                {{ form_widget(form.email,  {'attr': {'placeholder':'E-mail', 'title':'E-mail', 'class':'form-control'}}) }}
+                {{ form_widget(form.obs,  {'attr': {'placeholder':'Obs', 'title':'Obs', 'class':'form-control'}}) }}
+                {{ form_widget(form.titulo,  {'attr': {'placeholder':'Titulo', 'title':'Titulo', 'class':'form-control'}}) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
