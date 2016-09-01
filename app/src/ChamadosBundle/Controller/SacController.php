@@ -8,8 +8,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use ChamadosBundle\Entity\Sac;
+use ChamadosBundle\Entity\SacReport;
 use ChamadosBundle\Entity\Clientes;
 use ChamadosBundle\Form\SacType;
+use ChamadosBundle\Form\SacReportType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
@@ -155,9 +157,9 @@ class SacController extends Controller
    */
   public function reportsAction(Request $request)
   {
-    $entity = new Sac();
+    $entity = new SacReport();
 
-    $form = $this->createCreateForm($entity);
+    $form = $this->createCreateFormReport($entity);
 
     return $this->render('ChamadosBundle:Chamados:reports.html.twig',
       array(
@@ -166,5 +168,24 @@ class SacController extends Controller
       )
     );
 
+  }
+
+  /**
+   * Creates a form to create a Sac entity.
+   *
+   * @param Sac $entity The entity
+   *
+   * @return SymfonyComponentFormForm The form
+   */
+  private function createCreateFormReport(SacReport $entity)
+  {
+    // die(var_dump($entity));
+    $form = $this->createForm(SacReportType::class, $entity,
+      array(
+        'action' => $this->generateUrl('sac_reports'),
+        'method' => 'POST',
+      ));
+
+    return $form;
   }
 }
