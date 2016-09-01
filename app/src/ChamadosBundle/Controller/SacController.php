@@ -2,6 +2,7 @@
 
 namespace ChamadosBundle\Controller;
 
+use ChamadosBundle\Entity\Chamados;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -74,9 +75,31 @@ class SacController extends Controller
           $em = $this->getDoctrine()->getManager();
           $em->persist($cliente);
           $em->flush();
-          return new JsonResponse(['message' => json_encode(['pedido' => $pedido[0]->id,'email' => 'Email cadastrado com sucesso'])],200);
+
+          $newCli = $repoCli->findOneByEmail($cliEmail);
+          $chamado = new Chamados();
+          $chamado->setIdCliente($newCli->id);
+          $chamado->setIdPedido($pedidoId);
+          $chamado->setObs($request->request->get('sac')['obs']);
+          $chamado->setTitulo($request->request->get('sac')['titulo']);
+
+          $em = $this->getDoctrine()->getManager();
+          $em->persist($chamado);
+          $em->flush();
+
+          return new JsonResponse(['message' => 'Chamado cadastrado com suecesso! Novo cliente cadastrado.'],200);
         }else{
-          return new JsonResponse(['message' => json_encode(['pedido' => $pedido[0]->id])],200);
+          $newCli = $repoCli->findOneByEmail($cliEmail);
+          $chamado = new Chamados();
+          $chamado->setIdCliente($newCli->id);
+          $chamado->setIdPedido($pedidoId);
+          $chamado->setObs($request->request->get('sac')['obs']);
+          $chamado->setTitulo($request->request->get('sac')['titulo']);
+
+          $em = $this->getDoctrine()->getManager();
+          $em->persist($chamado);
+          $em->flush();
+          return new JsonResponse(['message' => 'Chamado cadastrado com suecesso!'],200);
         }
       }
     }

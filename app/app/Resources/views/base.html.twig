@@ -10,7 +10,14 @@
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <h1> SAC </h1>
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+        <a class="navbar-brand" href=""><b>SAC</b></a>
+        <ul class="nav navbar-nav ">
+            <li><a href="">Novo Chamado</a></li>
+            <li><a href="#"> Buscar Chamado</a></li>
+        </ul>
+    </nav>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}

@@ -37,6 +37,20 @@ class Chamados
   private $obs;
 
   /**
+   * @var string
+   *
+   * @ORM\Column(name="id_cliente", type="string", length=100, nullable=false)
+   */
+  private $id_cliente;
+
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="id_pedido", type="string", length=100, nullable=false)
+   */
+  private $id_pedido;
+
+  /**
    * @return int
    */
   public function getId()
@@ -84,7 +98,37 @@ class Chamados
     $this->obs = $obs;
   }
 
+  /**
+   * @return string
+   */
+  public function getIdCliente()
+  {
+    return $this->id_cliente;
+  }
 
+  /**
+   * @param string $id_cliente
+   */
+  public function setIdCliente($id_cliente)
+  {
+    $this->id_cliente = $id_cliente;
+  }
+
+  /**
+   * @return string
+   */
+  public function getIdPedido()
+  {
+    return $this->id_pedido;
+  }
+
+  /**
+   * @param string $id_pedido
+   */
+  public function setIdPedido($id_pedido)
+  {
+    $this->id_pedido = $id_pedido;
+  }
 
 }
 

@@ -20,21 +20,21 @@ class Clientes
    * @ORM\GeneratedValue(strategy="SEQUENCE")
    * @ORM\SequenceGenerator(sequenceName="clientes_id_seq", allocationSize=1, initialValue=1)
    */
-  private $id;
+  public $id;
 
   /**
    * @var string
    *
    * @ORM\Column(name="nome", type="string", length=250, nullable=false)
    */
-  private $nome;
+  public $nome;
 
   /**
    * @var string
    *
    * @ORM\Column(name="email", type="string", length=100, nullable=false)
    */
-  private $email;
+  public $email;
 
   /**
    * @return int

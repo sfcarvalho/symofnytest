@@ -32,21 +32,21 @@ class Sac
   /**
    * @var string
    *
-   * @ORM\Column(name="email", type="string", length=250, nullable=true)
+   * @ORM\Column(name="email", type="string", length=250, nullable=false)
    */
   private $email;
 
   /**
    * @var string
    *
-   * @ORM\Column(name="titulo", type="string", length=250, nullable=true)
+   * @ORM\Column(name="titulo", type="string", length=250, nullable=false)
    */
   private $titulo;
 
   /**
    * @var string
    *
-   * @ORM\Column(name="obs", type="string", length=250, nullable=true)
+   * @ORM\Column(name="obs", type="string", length=250, nullable=false)
    */
   private $obs;
 

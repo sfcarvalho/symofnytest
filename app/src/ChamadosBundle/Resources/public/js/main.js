@@ -7,16 +7,17 @@ function initAjaxForm()
         $.post({
             type: $(this).attr('method'),
             url: $(this).attr('action'),
-            data: $(this).serialize()
+            data: $(this).serialize(),
+            dataType: 'json'
         }).done(function (data) {
             if(!$.isEmptyObject(data.message)){
                 $('.error-area').addClass('hide');
                 $('.success-area').removeClass('hide');
-                $('.success-area').html('Pedido encontrado!');
+                $('.success-area').html(data.message);
             }else{
                 $('.success-area').addClass('hide');
                 $('.error-area').removeClass('hide');
-                $('.error-area').html('Nenhum pedido localizado.');
+                $('.error-area').html('Pedido não localizado. Favor informar um número de pedido válido.');
             }
             })
             .fail(function (jqXHR, textStatus, errorThrown) {
