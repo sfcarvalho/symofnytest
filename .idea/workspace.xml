@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0076fbd6-99f6-422d-9c48-7d63b5fd72aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/SacReport.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsFomr.html.twig" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsFomr.html.twig" />
-    </list>
+    <list default="true" id="0076fbd6-99f6-422d-9c48-7d63b5fd72aa" name="Default" comment="" />
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -30,8 +24,8 @@
       <file leaf-file-name="SacController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+            <state relative-caret-position="474">
+              <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
               <folding>
                 <element signature="e#45#80#0#PHP" expanded="true" />
                 <element signature="e#1267#3210#0#PHP" expanded="false" />
@@ -820,12 +814,12 @@
       <workItem from="1472578161272" duration="11321000" />
       <workItem from="1472647937761" duration="5407000" />
       <workItem from="1472654136744" duration="18738000" />
-      <workItem from="1472736044315" duration="11828000" />
+      <workItem from="1472736044315" duration="11893000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47294000" />
+    <option name="totallyTimeSpent" value="47359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="18" width="1871" height="1062" extended-state="6" />
@@ -1293,8 +1287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+        <state relative-caret-position="474">
+          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
           <folding>
             <element signature="e#45#80#0#PHP" expanded="true" />
             <element signature="e#1267#3210#0#PHP" expanded="false" />
