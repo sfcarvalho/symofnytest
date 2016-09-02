@@ -39,14 +39,15 @@ class Chamados
   /**
    * @var string
    *
-   * @ORM\Column(name="id_cliente", type="string", length=100, nullable=false)
+   * @ORM\Column(name="id_cliente", type="integer", nullable=false)
    */
   private $id_cliente;
+
 
   /**
    * @var string
    *
-   * @ORM\Column(name="id_pedido", type="string", length=100, nullable=false)
+   * @ORM\Column(name="id_pedido", type="integer", nullable=false)
    */
   private $id_pedido;
 

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0076fbd6-99f6-422d-9c48-7d63b5fd72aa" name="Default" comment="" />
+    <list default="true" id="0076fbd6-99f6-422d-9c48-7d63b5fd72aa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Chamados.php" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Chamados.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/public/js/main.js" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" />
+    </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -24,101 +31,60 @@
       <file leaf-file-name="SacController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+            <state relative-caret-position="472">
+              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
               <folding>
                 <element signature="e#45#80#0#PHP" expanded="true" />
-                <element signature="e#1267#3210#0#PHP" expanded="false" />
-                <element signature="e#1721#3204#0#PHP" expanded="false" />
-                <element signature="e#1790#3204#0#PHP" expanded="false" />
-                <element signature="e#1836#3196#0#PHP" expanded="false" />
-                <element signature="e#2657#3196#0#PHP" expanded="false" />
                 <element signature="e#3507#3534#0#PHP" expanded="false" />
+                <marker date="1472852013685" expanded="true" signature="5445:5817" ph="select ch.ti... chamados" />
+                <marker date="1472852013685" expanded="true" signature="5445:5865" ph="select ch.ti... chamados" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SacReport.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Entity/SacReport.php">
+      <file leaf-file-name="Chamados.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Chamados.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="1224">
+              <caret line="110" column="30" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
               <folding>
-                <element signature="e#430#456#0#PHP" expanded="false" />
-                <element signature="e#459#533#0#PHP" expanded="false" />
-                <element signature="e#537#577#0#PHP" expanded="false" />
-                <element signature="e#580#678#0#PHP" expanded="false" />
-                <element signature="e#684#713#0#PHP" expanded="false" />
-                <element signature="e#716#775#0#PHP" expanded="false" />
-                <element signature="e#779#814#0#PHP" expanded="false" />
-                <element signature="e#817#884#0#PHP" expanded="false" />
+                <element signature="e#555#657#0#PHP" expanded="false" />
+                <element signature="e#677#776#0#PHP" expanded="false" />
+                <element signature="e#804#902#0#PHP" expanded="false" />
+                <element signature="e#928#954#0#PHP" expanded="false" />
+                <element signature="e#957#1010#0#PHP" expanded="false" />
+                <element signature="e#1014#1043#0#PHP" expanded="false" />
+                <element signature="e#1046#1101#0#PHP" expanded="false" />
+                <element signature="e#1105#1134#0#PHP" expanded="false" />
+                <element signature="e#1137#1198#0#PHP" expanded="false" />
+                <element signature="e#1202#1238#0#PHP" expanded="false" />
+                <element signature="e#1241#1312#0#PHP" expanded="false" />
+                <element signature="e#1316#1345#0#PHP" expanded="false" />
+                <element signature="e#1348#1403#0#PHP" expanded="false" />
+                <element signature="e#1407#1440#0#PHP" expanded="false" />
+                <element signature="e#1443#1502#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sac.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Sac.php">
+      <file leaf-file-name="busca.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/busca.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="55" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="176" selection-end-column="1" />
-              <folding>
-                <element signature="e#75#138#0#PHP" expanded="false" />
-                <element signature="e#154#399#0#PHP" expanded="false" />
-                <element signature="e#417#528#0#PHP" expanded="false" />
-                <element signature="e#1069#1100#0#PHP" expanded="false" />
-                <element signature="e#1125#1154#0#PHP" expanded="false" />
-                <element signature="e#1157#1222#0#PHP" expanded="false" />
-                <element signature="e#1226#1264#0#PHP" expanded="false" />
-                <element signature="e#1267#1346#0#PHP" expanded="false" />
-                <element signature="e#1350#1376#0#PHP" expanded="false" />
-                <element signature="e#1379#1432#0#PHP" expanded="false" />
-                <element signature="e#1436#1465#0#PHP" expanded="false" />
-                <element signature="e#1468#1523#0#PHP" expanded="false" />
-                <element signature="e#1526#1552#0#PHP" expanded="false" />
-                <element signature="e#1555#1629#0#PHP" expanded="false" />
-                <element signature="e#1778#1807#0#PHP" expanded="false" />
-                <element signature="e#1810#1882#0#PHP" expanded="false" />
-                <element signature="e#1886#1928#0#PHP" expanded="false" />
-                <element signature="e#1931#2025#0#PHP" expanded="false" />
-                <element signature="e#2029#2058#0#PHP" expanded="false" />
-                <element signature="e#2061#2120#0#PHP" expanded="false" />
-                <element signature="e#2124#2159#0#PHP" expanded="false" />
-                <element signature="e#2162#2229#0#PHP" expanded="false" />
-                <element signature="e#2233#2262#0#PHP" expanded="false" />
-                <element signature="e#2265#2326#0#PHP" expanded="false" />
-                <element signature="e#2330#2366#0#PHP" expanded="false" />
-                <element signature="e#2369#2440#0#PHP" expanded="false" />
-                <element signature="e#2444#2473#0#PHP" expanded="false" />
-                <element signature="e#2476#2531#0#PHP" expanded="false" />
-                <element signature="e#2535#2568#0#PHP" expanded="false" />
-                <element signature="e#2571#2630#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/DefaultController.php">
+      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-626">
-              <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-              <folding>
-                <element signature="e#45#90#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/AppBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding>
-                <element signature="e#40#99#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,8 +92,18 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="504">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/web/bundles/chamados/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -143,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SacType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Form/SacType.php">
+      <file leaf-file-name="PedidosController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/PedidosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="34" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="1" />
+            <state relative-caret-position="306">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -166,8 +142,8 @@
       <file leaf-file-name="reports.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state relative-caret-position="180">
+              <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -208,20 +184,20 @@
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Pedidos.php" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/public/js/main.js" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Clientes.php" />
-        <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Chamados.php" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Sac.php" />
         <option value="$PROJECT_DIR$/app/web/bundles/chamados/css/main.css" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/busca.html.twig" />
-        <option value="$PROJECT_DIR$/app/web/bundles/chamados/js/main.js" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/new.html.twig" />
         <option value="$PROJECT_DIR$/app/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/src/AppBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/app/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsFomr.html.twig" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/SacReport.php" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Form/SacReportType.php" />
+        <option value="$PROJECT_DIR$/app/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/web/bundles/chamados/js/main.js" />
+        <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" />
+        <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Chamados.php" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" />
       </list>
     </option>
@@ -231,6 +207,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -264,8 +243,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -393,28 +372,6 @@
               <option name="myItemId" value="chamados" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="var" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -453,6 +410,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ChamadosBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChamadosBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -572,32 +559,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChamadosBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -621,54 +582,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ChamadosBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -730,7 +643,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -804,6 +721,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0076fbd6-99f6-422d-9c48-7d63b5fd72aa" name="Default" comment="" />
@@ -814,22 +734,23 @@
       <workItem from="1472578161272" duration="11321000" />
       <workItem from="1472647937761" duration="5407000" />
       <workItem from="1472654136744" duration="18738000" />
-      <workItem from="1472736044315" duration="11893000" />
+      <workItem from="1472736044315" duration="13747000" />
+      <workItem from="1472830898690" duration="3012000" />
+      <workItem from="1472844842267" duration="6327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47359000" />
+    <option name="totallyTimeSpent" value="58552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="18" width="1871" height="1062" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20149653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15339391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -840,6 +761,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -885,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,9 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="59" />
-          <folding>
-            <element signature="e#39#79#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,7 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,7 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="58" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,7 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,7 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,31 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="78" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Chamados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
-          <folding>
-            <element signature="e#75#143#0#PHP" expanded="false" />
-            <element signature="e#163#408#0#PHP" expanded="false" />
-            <element signature="e#555#657#0#PHP" expanded="false" />
-            <element signature="e#949#975#0#PHP" expanded="false" />
-            <element signature="e#978#1031#0#PHP" expanded="false" />
-            <element signature="e#1035#1064#0#PHP" expanded="false" />
-            <element signature="e#1067#1122#0#PHP" expanded="false" />
-            <element signature="e#1126#1155#0#PHP" expanded="false" />
-            <element signature="e#1158#1219#0#PHP" expanded="false" />
-            <element signature="e#1223#1259#0#PHP" expanded="false" />
-            <element signature="e#1262#1333#0#PHP" expanded="false" />
-            <element signature="e#1337#1366#0#PHP" expanded="false" />
-            <element signature="e#1369#1424#0#PHP" expanded="false" />
-            <element signature="e#1428#1461#0#PHP" expanded="false" />
-            <element signature="e#1464#1523#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,7 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1071,9 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="35" />
-          <folding>
-            <element signature="e#45#90#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1081,15 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/bundles/chamados/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,23 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/busca.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,43 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/ChamadosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
-          <folding>
-            <element signature="e#45#90#0#PHP" expanded="true" />
-            <element signature="e#866#997#0#PHP" expanded="false" />
-            <element signature="e#1542#1636#0#PHP" expanded="false" />
-            <element signature="e#1650#1780#0#PHP" expanded="false" />
-            <element signature="e#1785#2066#0#PHP" expanded="false" />
-            <element signature="e#1910#2059#0#PHP" expanded="false" />
-            <element signature="e#1951#2058#0#PHP" expanded="false" />
-            <element signature="e#2072#2232#0#PHP" expanded="false" />
-            <element signature="e#2237#3003#0#PHP" expanded="false" />
-            <element signature="e#2502#2778#0#PHP" expanded="false" />
-            <element signature="e#2795#2996#0#PHP" expanded="false" />
-            <element signature="e#2836#2995#0#PHP" expanded="false" />
-            <element signature="e#3009#3133#0#PHP" expanded="false" />
-            <element signature="e#3138#3546#0#PHP" expanded="false" />
-            <element signature="e#3310#3482#0#PHP" expanded="false" />
-            <element signature="e#3552#3733#0#PHP" expanded="false" />
-            <element signature="e#3738#4009#0#PHP" expanded="false" />
-            <element signature="e#3812#3935#0#PHP" expanded="false" />
-            <element signature="e#3812#3969#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/PedidosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,9 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-626">
           <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding>
-            <element signature="e#45#90#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,33 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#99#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsFomr.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1254,7 +1043,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Entity/SacReport.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="432">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#430#456#0#PHP" expanded="false" />
@@ -1277,6 +1066,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/ChamadosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="e#45#90#0#PHP" expanded="true" />
+            <element signature="e#453#571#0#PHP" expanded="false" />
+            <element signature="e#576#860#0#PHP" expanded="false" />
+            <element signature="e#866#997#0#PHP" expanded="false" />
+            <element signature="e#1002#1644#0#PHP" expanded="false" />
+            <element signature="e#1542#1636#0#PHP" expanded="false" />
+            <element signature="e#1650#1780#0#PHP" expanded="false" />
+            <element signature="e#1785#2066#0#PHP" expanded="false" />
+            <element signature="e#1910#2059#0#PHP" expanded="false" />
+            <element signature="e#1951#2058#0#PHP" expanded="false" />
+            <element signature="e#2072#2232#0#PHP" expanded="false" />
+            <element signature="e#2237#3003#0#PHP" expanded="false" />
+            <element signature="e#2502#2778#0#PHP" expanded="false" />
+            <element signature="e#2795#2996#0#PHP" expanded="false" />
+            <element signature="e#2836#2995#0#PHP" expanded="false" />
+            <element signature="e#3009#3133#0#PHP" expanded="false" />
+            <element signature="e#3138#3546#0#PHP" expanded="false" />
+            <element signature="e#3310#3482#0#PHP" expanded="false" />
+            <element signature="e#3552#3733#0#PHP" expanded="false" />
+            <element signature="e#3738#4009#0#PHP" expanded="false" />
+            <element signature="e#3812#3935#0#PHP" expanded="false" />
+            <element signature="e#3812#3969#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Form/SacReportType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1285,18 +1105,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/PedidosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsFomr.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/busca.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/bundles/chamados/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Entity/Chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="110" column="30" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
+          <folding>
+            <element signature="e#555#657#0#PHP" expanded="false" />
+            <element signature="e#677#776#0#PHP" expanded="false" />
+            <element signature="e#804#902#0#PHP" expanded="false" />
+            <element signature="e#928#954#0#PHP" expanded="false" />
+            <element signature="e#957#1010#0#PHP" expanded="false" />
+            <element signature="e#1014#1043#0#PHP" expanded="false" />
+            <element signature="e#1046#1101#0#PHP" expanded="false" />
+            <element signature="e#1105#1134#0#PHP" expanded="false" />
+            <element signature="e#1137#1198#0#PHP" expanded="false" />
+            <element signature="e#1202#1238#0#PHP" expanded="false" />
+            <element signature="e#1241#1312#0#PHP" expanded="false" />
+            <element signature="e#1316#1345#0#PHP" expanded="false" />
+            <element signature="e#1348#1403#0#PHP" expanded="false" />
+            <element signature="e#1407#1440#0#PHP" expanded="false" />
+            <element signature="e#1443#1502#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+        <state relative-caret-position="472">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="e#45#80#0#PHP" expanded="true" />
-            <element signature="e#1267#3210#0#PHP" expanded="false" />
-            <element signature="e#1721#3204#0#PHP" expanded="false" />
-            <element signature="e#1790#3204#0#PHP" expanded="false" />
-            <element signature="e#1836#3196#0#PHP" expanded="false" />
-            <element signature="e#2657#3196#0#PHP" expanded="false" />
             <element signature="e#3507#3534#0#PHP" expanded="false" />
+            <marker date="1472852013685" expanded="true" signature="5445:5817" ph="select ch.ti... chamados" />
+            <marker date="1472852013685" expanded="true" signature="5445:5865" ph="select ch.ti... chamados" />
           </folding>
         </state>
       </provider>

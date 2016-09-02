@@ -169,6 +169,43 @@ class SacController extends Controller
     );
 
   }
+  /**
+   * @Route("/reportsResult", name="reports_results")
+   * @Method("POST")
+   */
+  public function reportsResultAction(Request $request)
+  {
+    $entity = new SacReport();
+    $form = $this->createCreateFormReport($entity);
+    $form->handleRequest($request);
+
+    $idPedido = $request->request->get('sac_report')['numero_pedido'];
+    $emailCli = $request->request->get('sac_report')['email'];
+
+    // Busca id do cliente pelo e-mail
+    $repoCli = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Clientes');
+    $cli = $repoCli->findOneByEmail($emailCli);
+
+    $em = $this->getDoctrine()->getManager();
+
+    $query = $em->createQuery("select ch.titulo,ch.obs,p.nome,cli.email 
+                              from ChamadosBundle:Chamados ch 
+                              inner join ChamadosBundle:Clientes cli WITH cli.id = ch.id_cliente 
+                              inner join ChamadosBundle:Pedidos p WITH p.id = ch.id_pedido 
+                              where p.id = :id_pedido or cli.id = :id_cliente")
+                              ->setParameter("id_pedido", 5)->setParameter("id_cliente", 39);
+
+    $chamado = $query->getResult();
+
+    return $this->render('ChamadosBundle:Chamados:reports.html.twig',
+      array(
+        'entity' => $entity,
+        'form' => $form->createView()
+      )
+    );
+  }
+
+
 
   /**
    * Creates a form to create a Sac entity.
@@ -182,7 +219,7 @@ class SacController extends Controller
     // die(var_dump($entity));
     $form = $this->createForm(SacReportType::class, $entity,
       array(
-        'action' => $this->generateUrl('sac_reports'),
+        'action' => $this->generateUrl('reports_results'),
         'method' => 'POST',
       ));
 
