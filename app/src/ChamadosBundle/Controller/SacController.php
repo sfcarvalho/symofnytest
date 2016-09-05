@@ -4,6 +4,7 @@ namespace ChamadosBundle\Controller;
 
 use ChamadosBundle\Entity\Chamados;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -23,7 +24,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class SacController extends Controller
 {
   /**
-   * @Route("/", name="sac_index")
+   * @Route("/sac", name="sac_index")
    * @Method("GET")
    */
   public function indexAction(Request $request)
@@ -134,25 +135,20 @@ class SacController extends Controller
 
   /**
    * Creates a form to create a Sac entity.
-   *
    * @param Sac $entity The entity
-   *
    * @return SymfonyComponentFormForm The form
    */
   private function createCreateForm(Sac $entity)
   {
-    // die(var_dump($entity));
     $form = $this->createForm(SacType::class, $entity,
       array(
         'action' => $this->generateUrl('sac_create'),
         'method' => 'POST',
       ));
-
     return $form;
   }
-
   /**
-   * @Route("/reports", name="sac_reports")
+   * @Route("/reports", name="reports")
    * @Method("GET")
    */
   public function reportsAction(Request $request)
@@ -186,32 +182,36 @@ class SacController extends Controller
     $repoCli = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Clientes');
     $cli = $repoCli->findOneByEmail($emailCli);
 
-    $em = $this->getDoctrine()->getManager();
+    $em = $this->getDoctrine()->getManager(); var_dump($cli);
 
-    $query = $em->createQuery("select ch.titulo,ch.obs,p.nome,cli.email 
-                              from ChamadosBundle:Chamados ch 
-                              inner join ChamadosBundle:Clientes cli WITH cli.id = ch.id_cliente 
-                              inner join ChamadosBundle:Pedidos p WITH p.id = ch.id_pedido 
-                              where p.id = :id_pedido or cli.id = :id_cliente")
-                              ->setParameter("id_pedido", 5)->setParameter("id_cliente", 39);
+    $query = $em->createQuery
+    ("select ch.titulo,ch.obs,p.nome,cli.email 
+      from ChamadosBundle:Chamados ch 
+      inner join ChamadosBundle:Clientes cli WITH cli.id = ch.id_cliente 
+      inner join ChamadosBundle:Pedidos p WITH p.id = ch.id_pedido 
+      where p.id = :id_pedido or cli.id = :id_cliente")
+      ->setParameter("id_pedido", 5)->setParameter("id_cliente", 39)
+      ->setFirstResult(0)->setMaxResults(100);
+    // $chamados = $query->getResult();
 
-    $chamado = $query->getResult();
-
+     $paginator = new Paginator($query, $fetchJoinCollection = true);
+     $paginator->setUseOutputWalkers(false);
+    // $c = count($paginator);
+     var_dump($paginator);
+    // foreach ($paginator as $chamado) {
+    //    echo $chamado->getHeadline() . "\n";
+    //     }
     return $this->render('ChamadosBundle:Chamados:reports.html.twig',
       array(
         'entity' => $entity,
-        'form' => $form->createView()
+        'form' => $form->createView(),
+        'chamados' => 'Lista'
       )
     );
   }
-
-
-
   /**
    * Creates a form to create a Sac entity.
-   *
    * @param Sac $entity The entity
-   *
    * @return SymfonyComponentFormForm The form
    */
   private function createCreateFormReport(SacReport $entity)

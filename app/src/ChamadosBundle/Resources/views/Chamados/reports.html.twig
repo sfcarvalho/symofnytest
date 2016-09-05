@@ -1,5 +1,3 @@
-{% extends 'base.html.twig' %}
-
 {% block body %}
 
     <div class="page-header">
@@ -8,7 +6,7 @@
 
     <small>Por favor, preencha corretamente todos os campos solicitados.</small>
     <div class="form_error"></div>
-    <form method="POST" class="ajaxForm" action="{{path('reports_results')}}">
+    <form method="POST" class="reportForm" action="{{path('reports_results')}}">
         <div id="form_body">
             {% include 'ChamadosBundle:Chamados:reportsFomr.html.twig' with {'form': form} %}
         </div>

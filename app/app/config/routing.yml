@@ -1,7 +1,7 @@
 chamados:
     resource: "@ChamadosBundle/Controller/"
     type:     annotation
-    prefix:   /sac
+    prefix:   /
 
 app:
     resource: "@AppBundle/Controller/"
