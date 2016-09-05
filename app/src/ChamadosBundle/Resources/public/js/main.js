@@ -43,11 +43,24 @@ function initAjaxSearchForm()
         data: $(this).serialize(),
         dataType: 'json'
     }).done(function (data) {
-        console.log('Submit'+data);
+        console.log(data);
+
         if(!$.isEmptyObject(data.message)){
             $('.error-area').addClass('hide');
             $('.success-area').removeClass('hide');
-            $('.success-area').html(data.message);
+
+            // $('.reportsResult').bootpag({
+            //     total: 3
+            // }).on("page", function(event, /* page number here */ num){
+            // $('.success-area').html(data.message);
+            // });
+
+            $('#page-selection').bootpag({
+                total: 10
+            }).on("page", function(event, /* page number here */ num){
+                $("#content").html(data.message); // some ajax content loading...
+            });
+
         }else{
             $('.success-area').addClass('hide');
             $('.error-area').removeClass('hide');

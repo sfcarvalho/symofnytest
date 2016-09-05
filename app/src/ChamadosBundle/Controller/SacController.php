@@ -182,7 +182,10 @@ class SacController extends Controller
     $repoCli = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Clientes');
     $cli = $repoCli->findOneByEmail($emailCli);
 
-    $em = $this->getDoctrine()->getManager(); var_dump($cli);
+    $repoPed = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Pedidos');
+    $ped = $repoPed->findOneById($idPedido);
+
+    $em = $this->getDoctrine()->getManager();
 
     $query = $em->createQuery
     ("select ch.titulo,ch.obs,p.nome,cli.email 
@@ -190,22 +193,19 @@ class SacController extends Controller
       inner join ChamadosBundle:Clientes cli WITH cli.id = ch.id_cliente 
       inner join ChamadosBundle:Pedidos p WITH p.id = ch.id_pedido 
       where p.id = :id_pedido or cli.id = :id_cliente")
-      ->setParameter("id_pedido", 5)->setParameter("id_cliente", 39)
-      ->setFirstResult(0)->setMaxResults(100);
-    // $chamados = $query->getResult();
+      ->setParameter("id_pedido", $ped->id)->setParameter("id_cliente", $cli->id);
+//      ->setFirstResult(0)->setMaxResults(100);
+     $chamados = $query->getResult();
 
-     $paginator = new Paginator($query, $fetchJoinCollection = true);
-     $paginator->setUseOutputWalkers(false);
-    // $c = count($paginator);
-     var_dump($paginator);
-    // foreach ($paginator as $chamado) {
-    //    echo $chamado->getHeadline() . "\n";
-    //     }
+    return new JsonResponse(['message' => json_encode($chamados,0)],200);
+
+    // echo "<pre>"; var_dump($chamados);
+
     return $this->render('ChamadosBundle:Chamados:reports.html.twig',
       array(
         'entity' => $entity,
         'form' => $form->createView(),
-        'chamados' => 'Lista'
+        'chamados' => $chamados
       )
     );
   }
