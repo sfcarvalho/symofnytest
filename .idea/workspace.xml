@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0076fbd6-99f6-422d-9c48-7d63b5fd72aa" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsFomr.html.twig" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsForm.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/public/js/main.js" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/public/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" afterPath="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SacController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SacController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="269" column="56" selection-start-line="269" selection-start-column="56" selection-end-line="269" selection-end-column="56" />
+            <state relative-caret-position="420">
+              <caret line="188" column="25" selection-start-line="188" selection-start-column="25" selection-end-line="188" selection-end-column="25" />
               <folding>
                 <element signature="e#45#80#0#PHP" expanded="true" />
                 <element signature="e#626#670#0#PHP" expanded="false" />
@@ -57,29 +52,16 @@
                 <element signature="e#4279#4425#0#PHP" expanded="false" />
                 <element signature="e#4328#4424#0#PHP" expanded="false" />
                 <element signature="e#4451#4520#0#PHP" expanded="false" />
-                <element signature="e#7465#7622#0#PHP" expanded="false" />
-                <element signature="e#7520#7621#0#PHP" expanded="false" />
-                <marker date="1473197372109" expanded="true" signature="8265:8545" ph="select ch.ti... ChamadosBundle" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/AppBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/web/bundles/chamados/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
+            <state relative-caret-position="640">
+              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -153,10 +135,10 @@
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsFomr.html.twig" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsResults.html.twig" />
         <option value="$PROJECT_DIR$/app/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsForm.html.twig" />
         <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig" />
         <option value="$PROJECT_DIR$/app/web/bundles/chamados/js/main.js" />
+        <option value="$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php" />
       </list>
     </option>
   </component>
@@ -779,12 +761,12 @@
       <workItem from="1473186405806" duration="107000" />
       <workItem from="1473187943699" duration="6008000" />
       <workItem from="1473195075472" duration="200000" />
-      <workItem from="1473195445983" duration="2774000" />
+      <workItem from="1473195445983" duration="4789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97830000" />
+    <option name="totallyTimeSpent" value="99845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="15" width="1559" height="885" extended-state="6" />
@@ -1107,6 +1089,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsForm.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/AppBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
@@ -1115,10 +1113,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/bundles/chamados/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Controller/SacController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="269" column="56" selection-start-line="269" selection-start-column="56" selection-end-line="269" selection-end-column="56" />
+        <state relative-caret-position="420">
+          <caret line="188" column="25" selection-start-line="188" selection-start-column="25" selection-end-line="188" selection-end-column="25" />
           <folding>
             <element signature="e#45#80#0#PHP" expanded="true" />
             <element signature="e#626#670#0#PHP" expanded="false" />
@@ -1142,34 +1148,7 @@
             <element signature="e#4279#4425#0#PHP" expanded="false" />
             <element signature="e#4328#4424#0#PHP" expanded="false" />
             <element signature="e#4451#4520#0#PHP" expanded="false" />
-            <element signature="e#7465#7622#0#PHP" expanded="false" />
-            <element signature="e#7520#7621#0#PHP" expanded="false" />
-            <marker date="1473197372109" expanded="true" signature="8265:8545" ph="select ch.ti... ChamadosBundle" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reports.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ChamadosBundle/Resources/views/Chamados/reportsForm.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/bundles/chamados/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>

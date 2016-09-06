@@ -50,6 +50,7 @@ function initAjaxSearchForm()
                 ordering:  false
             } );
             $('#resultsChamados').DataTable( {
+                "pageLength": 5,
                 "processing": true,
                 "aaData": data.chamados,
                 "aoColumns": [

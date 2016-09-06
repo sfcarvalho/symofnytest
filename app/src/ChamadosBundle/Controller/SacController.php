@@ -177,6 +177,10 @@ class SacController extends Controller
     $idPedido = $request->request->get('sac_report')['numero_pedido'];
     $emailCli = $request->request->get('sac_report')['email'];
 
+    if(empty($idPedido) || empty($emailCli)) {
+      return new JsonResponse(['message' => 'Informe ao menos um parâmetro de busca','status' => false],200);
+    }
+
     if(!empty($idPedido) && !empty($emailCli)) {
       // Busca id do cliente pelo e-mail
       $repoCli = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Clientes');
@@ -190,32 +194,11 @@ class SacController extends Controller
 
     if(!empty($cli) && !empty($ped)){
       $currentPage = empty($currentPage) ? 1 : $currentPage;
-
       $chamados = $this->getChamados($currentPage,$cli,$ped);
-//    $totalChamadosReturned = $chamados->getIterator()->count();
-//    $totalChamados = $chamados->count();
-//    $iterator = $chamados->getIterator();
-//    $limit = 4;
-//    $maxPages = ceil($chamados->count() / $limit);
-//    $thisPage = $page; die(var_dump($chamados));
-//    die(var_dump($totalChamadosReturned,$totalChamados,$maxPages,$thisPage,$iterator));
-//      $response = new Response();
-//      $response->setContent(json_encode(array(
-//        'data' => 123,
-//      )));
-//      $response->headers->set('Content-Type', 'application/json');
-//      $response = new Response();
-//      $response->setContent($chamados);
-//      $response->headers->set('Content-Type', 'application/json');
-//      die(var_dump(json_encode($chamados)));
-
       return new JsonResponse(['chamados' => $chamados,'status' => true],200);
-//    return $this->render('ChamadosBundle:Chamados:reportsResults.html.twig', compact('categories', 'maxPages', 'thisPage'));
     } else {
       return new JsonResponse(['message' => 'Pedido e/ou cliente não localizados','status' => false],200);
     }
-
-    // return empty($chamados) ? new JsonResponse(['message' => '','status' => false],200) : new JsonResponse(['message' => json_encode($chamados,0),'status' => true],200);
 
   }
   /**
@@ -225,7 +208,7 @@ class SacController extends Controller
    */
   private function createCreateFormReport(SacReport $entity)
   {
-    // die(var_dump($entity));
+
     $form = $this->createForm(SacReportType::class, $entity,
       array(
         'action' => $this->generateUrl('reports_results'),
@@ -254,18 +237,6 @@ class SacController extends Controller
   {
     $em =$this->getDoctrine()->getRepository('ChamadosBundle:Chamados');
 
-//    $em = $this->getDoctrine()->getManager();
-//    $query = $em->createQuery
-//    ("select ch.titulo,ch.obs,p.nome,cli.email
-//      from ChamadosBundle:Chamados ch
-//      inner join ChamadosBundle:Clientes cli WITH cli.id = ch.id_cliente
-//      inner join ChamadosBundle:Pedidos p WITH p.id = ch.id_pedido
-//      where p.id = :id_pedido or cli.id = :id_cliente")
-//      ->setParameter("id_pedido", $ped->id)
-//      ->setParameter("id_cliente", $cli->id);
-//    $chamados = $query->getResult();
-//    var_dump($chamados);
-
     $query = $em->createQueryBuilder('ch')
       ->select('ch.titulo','ch.obs','p.nome','cli.email')
       ->leftJoin('ChamadosBundle:Clientes', 'cli', 'WITH', 'cli.id = ch.id_cliente')
@@ -275,8 +246,7 @@ class SacController extends Controller
       ->setParameter('id_pedido', $ped->id)
       ->setParameter('id_cliente', $cli->id)
       ->orderBy('ch.id', 'DESC')
-      ->getQuery(); // die(var_dump($query->getResult()));
-    // $paginator = $this->paginate($query, $currentPage);
+      ->getQuery();
     return $query->getArrayResult();
   }
 }
