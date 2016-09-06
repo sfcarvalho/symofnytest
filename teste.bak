@@ -164,6 +164,82 @@ ALTER TABLE ONLY pedidos ALTER COLUMN id SET DEFAULT nextval('pedidos_id_seq'::r
 
 COPY chamados (id, titulo, obs, id_cliente, id_pedido) FROM stdin;
 40	Novo Chamado	Nenhuma	39	3
+41	asd	21ascz\\xc	39	3
+42	asd	21ascz\\xc	39	3
+43	qweqwe	asdf	39	3
+44	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+45	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+46	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+47	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+48	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+49	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+50	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+51	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+52	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+53	jlçkjsçldfkjçladsf	kdsljfçlkqwjelrkjl	39	3
+54	jh	mj	43	3
+55			39	4
+56	Titulo	Observação	39	14
+57	Titulo	Observação	39	14
+58	Titulo	Observação	39	14
+59	Titulo	Observação	39	14
+60	Titulo	Observação	39	14
+61	Titulo	Observação	39	14
+62	Titulo	Observação	39	14
+63	Titulo	Observação	39	14
+64	Titulo	Observação	39	14
+65	Titulo	Observação	39	14
+66	Titulo	Observação	39	14
+67	Titulo	Observação	39	14
+68	Titulo	Observação	39	14
+69	Titulo	Observação	39	14
+70	Titulo	Observação	39	14
+71	Titulo	Observação	39	14
+72	Titulo	Observação	39	14
+73	Titulo	Observação	39	14
+74	Titulo	Observação	39	14
+75	Titulo	Observação	39	14
+76	Titulo	Observação	39	14
+77	Titulo	Observação	39	14
+78	Titulo	Observação	39	14
+79	Titulo	Observação	39	14
+80	Titulo	Observação	39	14
+81	Titulo	Observação	39	14
+82	Titulo	Observação	39	14
+83	Titulo	Observação	39	14
+84	Titulo	Observação	39	14
+85	Titulo	Observação	39	14
+86	Titulo	Observação	39	14
+87	Titulo	Observação	39	14
+88	Titulo	Observação	39	14
+89	Titulo	Observação	39	14
+90	Titulo	Observação	39	14
+91	Titulo	Observação	39	14
+92	Titulo	Observação	39	14
+93	Titulo	Observação	39	14
+94	Titulo	Observação	45	14
+95	Titulo	Observação	45	14
+96	Titulo	Observação	45	14
+97	Titulo	Observação	45	14
+98	Titulo	Observação	45	14
+99	Titulo	Observação	45	14
+100	Titulo	Observação	45	14
+101	Titulo	Observação	45	14
+102	Titulo	Observação	45	14
+103	Titulo	Observação	45	14
+104	Titulo	Observação	45	14
+105	Titulo	Observação	45	14
+106	Titulo	Observação	45	14
+107	Titulo	Observação	45	14
+108	Titulo	Observação	45	14
+109	Titulo	Observação	45	14
+110	Titulo	Observação	45	14
+111	Titulo	Observação	45	14
+112	Titulo	Observação	45	14
+113	Titulo	Observação	45	14
+114	Titulo	Observação	45	14
+115	Titulo	Observação	45	14
+116	Titulo	Observação	45	14
 \.
 
 
@@ -171,7 +247,7 @@ COPY chamados (id, titulo, obs, id_cliente, id_pedido) FROM stdin;
 -- Name: chamados_id_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
 --
 
-SELECT pg_catalog.setval('chamados_id_seq', 40, true);
+SELECT pg_catalog.setval('chamados_id_seq', 116, true);
 
 
 --
@@ -181,6 +257,20 @@ SELECT pg_catalog.setval('chamados_id_seq', 40, true);
 COPY clientes (id, nome, email) FROM stdin;
 39		sfcarvalho@gmail.com
 40	Saulo	sfcarvalho@gmail.com
+41		as2@s1ss
+42		oaoa@oaoa.comw
+43		sfcarvalho@gmailç.com
+45	Saulo	saulo@tarsoit.com
+46	Saulo	saulo1@tarsoit.com
+47	Saulo	saulo2@tarsoit.com
+48	Saulo	saulo3@tarsoit.com
+49	Saulo	saulo4@tarsoit.com
+50	Saulo	saulo5@tarsoit.com
+51	Saulo	saulo6@tarsoit.com
+52	Saulo	saulo7@tarsoit.com
+53	Saulo	saulo8@tarsoit.com
+54	Saulo	saulo9@tarsoit.com
+55	Saulo	saulo10@tarsoit.com
 \.
 
 
@@ -188,7 +278,7 @@ COPY clientes (id, nome, email) FROM stdin;
 -- Name: clientes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
 --
 
-SELECT pg_catalog.setval('clientes_id_seq', 40, true);
+SELECT pg_catalog.setval('clientes_id_seq', 65, true);
 
 
 --
@@ -197,6 +287,17 @@ SELECT pg_catalog.setval('clientes_id_seq', 40, true);
 
 COPY pedidos (id, nome, cliente_id) FROM stdin;
 3	Pedido Exemplo	\N
+4	Exemplo	44
+5	Pedido Exemplo	56
+6	Pedido Exemplo 1	57
+7	Pedido Exemplo 2	58
+8	Pedido Exemplo 3	59
+9	Pedido Exemplo 4	60
+10	Pedido Exemplo 5	61
+11	Pedido Exemplo 6	62
+12	Pedido Exemplo 7 	63
+13	Pedido Exemplo 8	64
+14	Pedido Exemplo 9	65
 \.
 
 
@@ -204,7 +305,7 @@ COPY pedidos (id, nome, cliente_id) FROM stdin;
 -- Name: pedidos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
 --
 
-SELECT pg_catalog.setval('pedidos_id_seq', 3, true);
+SELECT pg_catalog.setval('pedidos_id_seq', 14, true);
 
 
 --
