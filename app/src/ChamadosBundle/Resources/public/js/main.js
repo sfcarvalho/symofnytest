@@ -36,35 +36,36 @@ function initAjaxSearchForm()
 {
     $('body').on('submit', '.reportForm', function (e) {
     e.preventDefault();
-    console.log('Submit');
     $.post({
         type: $(this).attr('method'),
         url: $(this).attr('action'),
         data: $(this).serialize(),
         dataType: 'json'
     }).done(function (data) {
-        console.log(data);
-
-        if(!$.isEmptyObject(data.message)){
+        if(data.status){
             $('.error-area').addClass('hide');
-            $('.success-area').removeClass('hide');
-
-            // $('.reportsResult').bootpag({
-            //     total: 3
-            // }).on("page", function(event, /* page number here */ num){
-            // $('.success-area').html(data.message);
-            // });
-
-            $('#page-selection').bootpag({
-                total: 10
-            }).on("page", function(event, /* page number here */ num){
-                $("#content").html(data.message); // some ajax content loading...
-            });
-
+            $('#resultsChamados').removeClass('hide');
+            $.extend( $.fn.dataTable.defaults, {
+                searching: false,
+                ordering:  false
+            } );
+            $('#resultsChamados').DataTable( {
+                "processing": true,
+                "aaData": data.chamados,
+                "aoColumns": [
+                    { "mDataProp": "email" },
+                    { "mDataProp": "nome" },
+                    { "mDataProp": "obs" },
+                    { "mDataProp": "titulo" }
+                ]
+            } );
+            $('.buscarChamados').addClass('hide');
+            $('.novaBusca').click(function () {
+                window.location.reload(true);
+            }).removeClass('hide');
         }else{
-            $('.success-area').addClass('hide');
             $('.error-area').removeClass('hide');
-            $('.error-area').html('Nenhum chamado localizado.');
+            $('.error-area').html(data.message);
         }
     }).fail(function (jqXHR, textStatus, errorThrown) {
         if (typeof jqXHR.responseJSON !== 'undefined') {

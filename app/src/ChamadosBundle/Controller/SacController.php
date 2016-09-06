@@ -14,6 +14,7 @@ use ChamadosBundle\Entity\Clientes;
 use ChamadosBundle\Form\SacType;
 use ChamadosBundle\Form\SacReportType;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Sac controller.
@@ -41,7 +42,6 @@ class SacController extends Controller
     );
 
   }
-
   /**
    * Creates a new Sac entity.
    *
@@ -132,7 +132,6 @@ class SacController extends Controller
 //      'form' => $form->createView(),
 //    ));
   }
-
   /**
    * Creates a form to create a Sac entity.
    * @param Sac $entity The entity
@@ -169,45 +168,55 @@ class SacController extends Controller
    * @Route("/reportsResult", name="reports_results")
    * @Method("POST")
    */
-  public function reportsResultAction(Request $request)
+  public function reportsResultAction(Request $request,$page =1)
   {
     $entity = new SacReport();
     $form = $this->createCreateFormReport($entity);
     $form->handleRequest($request);
-
+    // Parametros do form
     $idPedido = $request->request->get('sac_report')['numero_pedido'];
     $emailCli = $request->request->get('sac_report')['email'];
 
-    // Busca id do cliente pelo e-mail
-    $repoCli = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Clientes');
-    $cli = $repoCli->findOneByEmail($emailCli);
+    if(!empty($idPedido) && !empty($emailCli)) {
+      // Busca id do cliente pelo e-mail
+      $repoCli = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Clientes');
+      $cli = $repoCli->findOneByEmail($emailCli);
+      // Busca pedido
+      $repoPed = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Pedidos');
+      $ped = $repoPed->findOneById($idPedido);
+    } else {
+      return new JsonResponse(['message' => 'Informe ao menos um parâmetro de busca','status' => false],200);
+    }
 
-    $repoPed = $this->getDoctrine()->getManager()->getRepository('ChamadosBundle:Pedidos');
-    $ped = $repoPed->findOneById($idPedido);
+    if(!empty($cli) && !empty($ped)){
+      $currentPage = empty($currentPage) ? 1 : $currentPage;
 
-    $em = $this->getDoctrine()->getManager();
+      $chamados = $this->getChamados($currentPage,$cli,$ped);
+//    $totalChamadosReturned = $chamados->getIterator()->count();
+//    $totalChamados = $chamados->count();
+//    $iterator = $chamados->getIterator();
+//    $limit = 4;
+//    $maxPages = ceil($chamados->count() / $limit);
+//    $thisPage = $page; die(var_dump($chamados));
+//    die(var_dump($totalChamadosReturned,$totalChamados,$maxPages,$thisPage,$iterator));
+//      $response = new Response();
+//      $response->setContent(json_encode(array(
+//        'data' => 123,
+//      )));
+//      $response->headers->set('Content-Type', 'application/json');
+//      $response = new Response();
+//      $response->setContent($chamados);
+//      $response->headers->set('Content-Type', 'application/json');
+//      die(var_dump(json_encode($chamados)));
 
-    $query = $em->createQuery
-    ("select ch.titulo,ch.obs,p.nome,cli.email 
-      from ChamadosBundle:Chamados ch 
-      inner join ChamadosBundle:Clientes cli WITH cli.id = ch.id_cliente 
-      inner join ChamadosBundle:Pedidos p WITH p.id = ch.id_pedido 
-      where p.id = :id_pedido or cli.id = :id_cliente")
-      ->setParameter("id_pedido", $ped->id)->setParameter("id_cliente", $cli->id);
-//      ->setFirstResult(0)->setMaxResults(100);
-     $chamados = $query->getResult();
+      return new JsonResponse(['chamados' => $chamados,'status' => true],200);
+//    return $this->render('ChamadosBundle:Chamados:reportsResults.html.twig', compact('categories', 'maxPages', 'thisPage'));
+    } else {
+      return new JsonResponse(['message' => 'Pedido e/ou cliente não localizados','status' => false],200);
+    }
 
-    return new JsonResponse(['message' => json_encode($chamados,0)],200);
+    // return empty($chamados) ? new JsonResponse(['message' => '','status' => false],200) : new JsonResponse(['message' => json_encode($chamados,0),'status' => true],200);
 
-    // echo "<pre>"; var_dump($chamados);
-
-    return $this->render('ChamadosBundle:Chamados:reports.html.twig',
-      array(
-        'entity' => $entity,
-        'form' => $form->createView(),
-        'chamados' => $chamados
-      )
-    );
   }
   /**
    * Creates a form to create a Sac entity.
@@ -224,5 +233,50 @@ class SacController extends Controller
       ));
 
     return $form;
+  }
+
+  public function paginate($dql, $page = 1, $limit = 5)
+  {
+    $paginator = new Paginator($dql);
+
+    $paginator->getQuery()
+      ->setFirstResult($limit * ($page - 1)) // Offset
+      ->setMaxResults($limit); // Limit
+
+    return $paginator;
+  }
+
+  /**
+   * @param integer $currentPage The current page (passed from controller)
+   * @return \Doctrine\ORM\Tools\Pagination\Paginator
+   */
+  public function getChamados($currentPage = 1, $cli, $ped)
+  {
+    $em =$this->getDoctrine()->getRepository('ChamadosBundle:Chamados');
+
+//    $em = $this->getDoctrine()->getManager();
+//    $query = $em->createQuery
+//    ("select ch.titulo,ch.obs,p.nome,cli.email
+//      from ChamadosBundle:Chamados ch
+//      inner join ChamadosBundle:Clientes cli WITH cli.id = ch.id_cliente
+//      inner join ChamadosBundle:Pedidos p WITH p.id = ch.id_pedido
+//      where p.id = :id_pedido or cli.id = :id_cliente")
+//      ->setParameter("id_pedido", $ped->id)
+//      ->setParameter("id_cliente", $cli->id);
+//    $chamados = $query->getResult();
+//    var_dump($chamados);
+
+    $query = $em->createQueryBuilder('ch')
+      ->select('ch.titulo','ch.obs','p.nome','cli.email')
+      ->leftJoin('ChamadosBundle:Clientes', 'cli', 'WITH', 'cli.id = ch.id_cliente')
+      ->leftJoin('ChamadosBundle:Pedidos', 'p', 'WITH', 'p.id = ch.id_pedido')
+      ->where('p.id > :id_pedido')
+      ->orWhere('cli.id = :id_cliente')
+      ->setParameter('id_pedido', $ped->id)
+      ->setParameter('id_cliente', $cli->id)
+      ->orderBy('ch.id', 'DESC')
+      ->getQuery(); // die(var_dump($query->getResult()));
+    // $paginator = $this->paginate($query, $currentPage);
+    return $query->getArrayResult();
   }
 }

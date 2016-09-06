@@ -1,16 +1,23 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <div class="row" >
-        <div class="col-lg-4 col-md-4">
-            <div class="col-md-12 bg-danger error-area hide"></div>
+        <div class="col-lg-12 col-md-12">
             <div class="form-group input-group">
                 {{ form_widget(form.numero_pedido,  {'attr': {'placeholder':'Numero Pedido', 'title':'Numero Pedido', 'class':'form-control'}}) }}
                 {{ form_widget(form.email,  {'attr': {'placeholder':'E-mail', 'title':'E-mail', 'class':'form-control'}}) }}
             </div>
             <div class="col-md-12 success-area reportsResult hide"></div>
-
-            <div id="content">Dynamic Content goes here</div>
-            <div id="page-selection">Pagination goes here</div>
+            <div class="col-md-12 bg-danger error-area hide"></div>
+            <table id="resultsChamados" class="stripe hide" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Cliente (e-mail)</th>
+                    <th>Pedido</th>
+                    <th>Observação</th>
+                    <th>Título</th>
+                </tr>
+                </thead>
+            </table>
         </div>
     </div>
 {% endblock %}
